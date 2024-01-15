@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --check-icon-background: linear-gradient(
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  --bright-blue: hsl(220, 98%, 61%);
+
+  /* Light theme */
+  --white: hsla(0, 0%, 100%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--very-light-gray);
+  position: relative;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  min-width: 455px;
+}
+
+main {
+  z-index: 1;
+  width: 450px;
+}
+
+.background-image {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  letter-spacing: 0.5rem;
+}
+
+.header h1 {
+  color: var(--bright-blue);
+}
+
+.input-container {
+  display: flex;
+  align-content: center;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.add-todo-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid var(--light-grayish-blue);
+}
+
+.add-todo-btn:hover {
+  cursor: pointer;
+}
+
+.add-todo-input {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  width: 100%;
+  color: var(--very-dark-grayish-blue);
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.add-todo-input:focus {
+  outline: none;
+}
+
+.add-todo-input::placeholder {
+  color: var(--dark-grayish-blue);
+}
+
+.todo-items-container p {
+  color: var(--very-dark-grayish-blue);
+  margin-left: 0.5rem;
+}
+
+.todo-items-content {
+  display: flex;
+  align-items: center;
+}
+
+.input-container,
+.todo-items-container {
+  background-color: var(--white);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--very-light-grayish-blue);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 1rem;
+}
+
+.items-left {
+  color: var(--light-grayish-blue);
+  font-size: 0.8rem;
+}
+
+.status-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(dark-grayish-blue);
+  background-color: var(--white);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.status-button {
+  background: none;
+  border: none;
+  color: var(--light-grayish-blue);
+  margin: 0 0.4rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+.status-button:hover {
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+.task-done-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--light-grayish-blue);
+}
+
+.task-done-btn:hover {
+  border-color: var(--check-icon-background) !important;
+  cursor: pointer;
+}
+
+.show-check-icon {
+  width: 100%;
+  background: var(--check-icon-background);
+  border-radius: 50%;
+  padding: 0.4rem;
+  display: none;
+}
+
+.line-through-style {
+  color: var(--very-light-grayish-blue) !important;
+}
+
+.selected-status {
+  color: var(--bright-blue);
+}
+
+.dark-light-toggle-button:hover {
+  cursor: pointer;
+}
+
+.middle-buttons-container-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  main {
+    width: 440px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    min-width: 375px;
+    padding: 1.5rem;
+  }
+
+  .middle-buttons-container {
+    display: none;
+  }
+
+  .middle-buttons-container-mobile {
+    margin-top: 30px;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+    color: var(--very-dark-grayish-blue);
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+}

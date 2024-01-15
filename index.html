@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" />
+
+    <link rel="stylesheet" id="theme-style" href="darkmode.css" />
+  </head>
+  <body>
+    <img
+      class="background-image"
+      src="./images/bg-desktop-dark.jpg"
+      alt="background image"
+    />
+    <main>
+      <div class="header">
+        <h1>TODO</h1>
+        <img
+          class="dark-light-toggle-button"
+          src="./images/icon-sun.svg"
+          alt=""
+        />
+      </div>
+      <div class="input-container">
+        <div class="add-todo-btn"></div>
+        <input
+          class="add-todo-input"
+          type="text"
+          placeholder="Create a new todo..."
+        />
+      </div>
+
+      <div class="todo-items-container">
+        <div class="item item-1">
+          <div class="todo-items-content">
+            <div class="task-done-btn"></div>
+            <img
+              class="show-check-icon"
+              src="./images/icon-check.svg"
+              alt="check icon"
+            />
+
+            <p id="todo-content"></p>
+          </div>
+          <img
+            class="delete-button"
+            src="./images/icon-cross.svg"
+            alt="x icon"
+          />
+        </div>
+
+        <div class="item item-2">
+          <div class="todo-items-content">
+            <div class="task-done-btn"></div>
+            <img
+              class="show-check-icon"
+              src="./images/icon-check.svg"
+              alt="check icon"
+            />
+
+            <p id="todo-content"></p>
+          </div>
+          <img
+            class="delete-button"
+            src="./images/icon-cross.svg"
+            alt="x icon"
+          />
+        </div>
+
+        <div class="item item-3">
+          <div class="todo-items-content">
+            <div class="task-done-btn"></div>
+            <img
+              class="show-check-icon"
+              src="./images/icon-check.svg"
+              alt="check icon"
+            />
+
+            <p id="todo-content"></p>
+          </div>
+          <img
+            class="delete-button"
+            src="./images/icon-cross.svg"
+            alt="x icon"
+          />
+        </div>
+
+        <div class="item item-4">
+          <div class="todo-items-content">
+            <div class="task-done-btn"></div>
+            <img
+              class="show-check-icon"
+              src="./images/icon-check.svg"
+              alt="check icon"
+            />
+
+            <p id="todo-content"></p>
+          </div>
+          <img
+            class="delete-button"
+            src="./images/icon-cross.svg"
+            alt="x icon"
+          />
+        </div>
+
+        <div class="item item-5">
+          <div class="todo-items-content">
+            <div class="task-done-btn"></div>
+            <img
+              class="show-check-icon"
+              src="./images/icon-check.svg"
+              alt="check icon"
+            />
+
+            <p id="todo-content"></p>
+          </div>
+          <img
+            class="delete-button"
+            src="./images/icon-cross.svg"
+            alt="x icon"
+          />
+        </div>
+
+        <div class="item item-6">
+          <div class="todo-items-content">
+            <div class="task-done-btn"></div>
+            <img
+              class="show-check-icon"
+              src="./images/icon-check.svg"
+              alt="check icon"
+            />
+
+            <p id="todo-content"></p>
+          </div>
+          <img
+            class="delete-button"
+            src="./images/icon-cross.svg"
+            alt="x icon"
+          />
+        </div>
+      </div>
+
+      <div class="status-container">
+        <p class="items-left">Items left</p>
+        <div class="middle-buttons-container">
+          <button class="all-button status-button" onclick="selectStatus(this)">
+            All
+          </button>
+          <button
+            class="active-button status-button"
+            onclick="selectStatus(this)"
+          >
+            Active
+          </button>
+          <button
+            class="completed-button status-button"
+            onclick="selectStatus(this)"
+          >
+            Completed
+          </button>
+        </div>
+        <button
+          class="clear-completed-button status-button"
+          onclick="selectStatus(this)"
+        >
+          Clear Completed
+        </button>
+      </div>
+      <!-- Show in mobile view -->
+      <div class="middle-buttons-container-mobile">
+        <button
+          class="all-button-mobile status-button"
+          onclick="selectStatus(this)"
+        >
+          All
+        </button>
+        <button
+          class="active-button-mobile status-button"
+          onclick="selectStatus(this)"
+        >
+          Active
+        </button>
+        <button
+          class="completed-button-mobile status-button"
+          onclick="selectStatus(this)"
+        >
+          Completed
+        </button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
